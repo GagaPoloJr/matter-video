@@ -53,6 +53,10 @@ export default {
 </script>
 
 <style scoped>
+
+.hero-area-wrapper{
+  height: 90vh;
+}
 .hero-area-content h3 {
   font-size: 32px;
   font-weight: 300;

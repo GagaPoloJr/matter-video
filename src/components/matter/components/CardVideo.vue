@@ -1,61 +1,36 @@
 <template>
-  <div class="">
-    <!-- Video Area Start -->
-    <section id="video-area" class="video-area">
-      <div class="container">
-        <div class="row">
-          <div v-for="item in items" :key="item.id" class="col-12 col-md-4 video-card">
-            <img
-              class="ornament ornament-style-1"
-              :src="require('../../../assets/icon/ornament-video-pink.svg')"
-              alt=""
-            />
-            <div class="video-wrapper">
-              <b-img class="img" :src="item.posterImg" :img-alt="altText"></b-img>
-              <a
-                class="venobox play-button"
-                data-vbtype="video"
-                data-autoplay="true"
-                href="http://youtu.be/ik7SkKD3lcI"
-                target="_blank"
-                ><i class="fas fa-play"></i
-              ></a>
-            </div>
-            <img
-              class="ornament ornament-style-2"
-              :src="require('../../../assets/icon/ornament-video-blue.svg')"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Video Area End -->
+  <div class="video-card">
+    <img
+      class="ornament ornament-style-1"
+      :src="require('../../../assets/icon/ornament-video-pink.svg')"
+      alt=""
+    />
+    <div class="video-wrapper">
+      <b-img class="img" :src="item.posterImg" :img-alt="item.altText"></b-img>
+      <a
+        class="venobox play-button"
+        data-vbtype="video"
+        data-autoplay="true"
+        href="http://youtu.be/ik7SkKD3lcI"
+        target="_blank"
+        ><i class="fas fa-play"></i
+      ></a>
+    </div>
+    <img
+      class="ornament ornament-style-2"
+      :src="require('../../../assets/icon/ornament-video-blue.svg')"
+      alt=""
+    />
   </div>
 </template>
 
 <script>
 export default {
   name: "CardVideo",
-  data() {
-    return {
-      posterImg: require("../../../assets/img/video-area-video-poster.jpg"),
-      altText: "Video",
-      items: [
-        {
-          id: 1,
-          posterImg: require("../../../assets/img/matter/thumb-video-1.jpg"),
-        },
-        {
-          id: 2,
-          posterImg: require("../../../assets/img/matter/thumb-video-2.jpg"),
-        },
-        {
-          id: 3,
-          posterImg: require("../../../assets/img/matter/thumb-video-3.jpg"),
-        },
-      ],
-    };
+  props: {
+    item: {
+      type: Object,
+    },
   },
 };
 </script>
@@ -78,7 +53,7 @@ export default {
 }
 .ornament-style-1 {
   top: -10px;
-  left: 5px;
+  left: -10px;
   z-index: 1;
 }
 .ornament-style-2 {
@@ -111,9 +86,9 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -40%);
-  font-size: 23px;
-  height: 70px;
-  width: 70px;
+  font-size: 18px;
+  height: 50px;
+  width: 50px;
 }
 
 /* replace end */

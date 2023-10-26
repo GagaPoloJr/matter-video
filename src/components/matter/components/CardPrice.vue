@@ -1,30 +1,24 @@
 <template>
-  <div class="wrapper">
-    <div
-      v-for="item in items"
-      :key="item.id"
-      class="card-price card-price-style"
-    >
-      <div class="card-price-top">
-        <h3>Free</h3>
+  <div class="card-price card-price-style">
+    <div class="card-price-top">
+      <h3>{{ item.badge }}</h3>
+    </div>
+    <div class="card-price-body">
+      <div class="price">
+        <h1>{{ item.price }}</h1>
+        <span>/month</span>
       </div>
-      <div class="card-price-body">
-        <div class="price">
-          <h1>$20</h1>
-          <span>/month</span>
-        </div>
-        <div class="price-info">
-          <ul>
-            <li>Matter Feature</li>
-            <li>Matter Feature</li>
-            <li>Matter Feature</li>
-            <li>Matter Feature</li>
-            <li>Matter Feature</li>
-          </ul>
-        </div>
-        <div class="price-btn">
-          <a href="">Get Started</a>
-        </div>
+      <div class="price-info">
+        <ul>
+          <li>Matter Feature</li>
+          <li>Matter Feature</li>
+          <li>Matter Feature</li>
+          <li>Matter Feature</li>
+          <li>Matter Feature</li>
+        </ul>
+      </div>
+      <div class="price-btn">
+        <a href="">Get Started</a>
       </div>
     </div>
   </div>
@@ -33,34 +27,18 @@
 <script>
 export default {
   name: "CardPrice",
-  data() {
-    return {
-      items: [
-        {
-          id: 1,
-        },
-        {
-          id: 2,
-        },
-        {
-          id: 3,
-        },
-      ],
-    };
+  props: {
+    item: {
+      type: Object,
+    },
   },
 };
 </script>
 
 <style scoped>
-.wrapper {
-  display: flex;
-  width: 100%;
-  gap: 20px;
-  justify-content: center;
-}
 .card-price {
-  width: 100%;
-  max-width: 373px;
+  /* width: 100%;
+  max-width: 373px; */
   height: 545px;
   border-radius: 20px;
   background: #fff;
