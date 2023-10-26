@@ -71,10 +71,10 @@ html {
 }
 
 body {
-    background: #fff none repeat scroll;
+    background: #F9F9F9 none repeat scroll;
     font-size: 16px;
     font-weight: normal;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #777c87;
     letter-spacing: 0.05em;
     position: relative;
@@ -159,7 +159,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     margin: 0;
     color: #2c303a;
@@ -167,7 +166,7 @@ h6 {
 
 p{
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
 }
 figure {

@@ -44,6 +44,11 @@ Vue.use(VueRouter)
     path: '/blogsingle',
     name: 'BlogSingle',
     component: () => import(/* webpackChunkName: "blogsingle" */ '../views/BlogSingle.vue')
+  },
+  {
+    path: '/matter',
+    name: 'MatterPage',
+    component: () => import(/* webpackChunkName: "matterpage" */ '../views/Matter.vue')
   }
 ]
 

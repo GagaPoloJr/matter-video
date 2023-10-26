@@ -23,7 +23,6 @@
     <!-- Footer End -->
   </div>
 </template>
-
 <script>
 
 export default {
