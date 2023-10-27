@@ -71,5 +71,10 @@ strong {
   .section-matter-2 h1 {
     font-size: 24px;
   }
+  .section-matter-2 img {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
 }
 </style>

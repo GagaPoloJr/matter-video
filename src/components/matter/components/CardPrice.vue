@@ -1,5 +1,5 @@
 <template>
-  <div class="card-price card-price-style">
+  <div class="card-price card-price-style" :class="proBadge">
     <div class="card-price-top">
       <h3>{{ item.badge }}</h3>
     </div>
@@ -10,21 +10,23 @@
       </div>
       <div class="price-info">
         <ul>
-          <li>Matter Feature</li>
-          <li>Matter Feature</li>
-          <li>Matter Feature</li>
-          <li>Matter Feature</li>
-          <li>Matter Feature</li>
+          <li class="price-feat" v-for="(item, index) in listItem" :key="index">
+            <img :src="require('@/assets/icon/checkbox.svg')" alt="" />
+            {{ item.feat }}
+          </li>
         </ul>
       </div>
-      <div class="price-btn">
-        <a href="">Get Started</a>
+      <div class="price-btn-wrap">
+        <a v-if="item.badge !== 'Pro'" class="price-btn" href="">Get Started</a>
+        <cta-button v-else size="xtra-large" text="Get Started" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import CtaButton from "./CtaButton.vue";
+
 export default {
   name: "CardPrice",
   props: {
@@ -32,13 +34,40 @@ export default {
       type: Object,
     },
   },
+  computed: {
+    proBadge() {
+      return {
+        "pro-style": this.item.badge === "Pro",
+      };
+    },
+  },
+  data() {
+    return {
+      listItem: [
+        {
+          feat: "Matter Feature",
+        },
+        {
+          feat: "Matter Feature",
+        },
+        {
+          feat: "Matter Feature",
+        },
+        {
+          feat: "Matter Feature",
+        },
+        {
+          feat: "Matter Feature",
+        },
+      ],
+    };
+  },
+  components: { CtaButton },
 };
 </script>
 
 <style scoped>
 .card-price {
-  /* width: 100%;
-  max-width: 373px; */
   height: 545px;
   border-radius: 20px;
   background: #fff;
@@ -54,6 +83,18 @@ export default {
 .card-price-style:hover {
   transform: scale(1.01);
 }
+
+/* pro style card */
+
+.pro-style{
+  height: 600px;
+}
+
+.pro-style .card-price-top h3{
+  color: #0100FF ;
+}
+
+/* end pro style card */
 
 .card-price-top {
   padding-bottom: 30px;
@@ -87,9 +128,17 @@ export default {
 .price-info li {
   line-height: 40px;
 }
-.price-btn a {
+.price-feat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-btn-wrap .price-btn {
   border-radius: 50px;
   border: 1px solid #01a9ed;
   padding: 16px 42px;
+  color: #01a9ed;
 }
 </style>

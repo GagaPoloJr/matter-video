@@ -10,105 +10,51 @@
         id="mainNav"
       >
         <div class="container">
-          <router-link class="navbar-brand js-scroll-trigger" to="/">
-            <b-img
-              :src="require('../../../assets/icon/logo-blue.png')"
-              img-alt="RATH Logo"
-              class="img-fluid"
-            ></b-img>
-          </router-link>
-          <button
-            class="navbar-toggler navbar-toggler-right"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+          <div
+            style="width: 100%"
+            class="row justify-content-between align-items-center"
           >
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-capitalize ml-auto">
-              <li class="nav-item dropdown">
-                <a
-                  href="#home"
-                  class="nav-link js-scroll-trigger dropdown-toggle"
-                  data-toggle="dropdown"
-                  >Home<i class="fas fa-angle-down"></i
-                ></a>
-                <ul class="dropdown-menu">
-                  <li><router-link to="/">Home</router-link></li>
-                  <li><router-link to="/home2">Feature</router-link></li>
-                  <li><router-link to="/home3">Pricing</router-link></li>
-                  <li><router-link to="/home4">Contact Us</router-link></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link js-scroll-trigger"
-                  href="#about"
-                  target="_self"
-                  >Feature</a
+            <router-link class="navbar-brand js-scroll-trigger" to="/">
+              <b-img
+                :src="logo"
+                img-alt="matter Logo"
+                class="img-fluid"
+              ></b-img>
+            </router-link>
+            <button
+              class="navbar-toggler navbar-toggler-right"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarResponsive"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav text-capitalize ml-auto">
+                <li
+                  class="nav-item"
+                  v-for="(nav, index) in navItems"
+                  :key="index"
                 >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link js-scroll-trigger"
-                  href="#screenshots"
-                  target="_self"
-                  >Pricing</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link js-scroll-trigger"
-                  href="#features"
-                  target="_self"
-                  >Contact Us</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link js-scroll-trigger"
-                  href="#reviews"
-                  target="_self"
-                  >Reviews</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link js-scroll-trigger dropdown-toggle"
-                  data-toggle="dropdown"
-                  href="#blog"
-                  >Blog<i class="fas fa-angle-down"></i
-                ></a>
-                <ul class="dropdown-menu">
-                  <li><router-link to="/bloggrid">Blog Grid</router-link></li>
-                  <li>
-                    <router-link to="/blogclassic">Blog Classic</router-link>
-                  </li>
-                  <li>
-                    <router-link to="/blogsingle">Blog Single</router-link>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link js-scroll-trigger"
-                  href="#contact"
-                  target="_self"
-                  >Contact</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link js-scroll-trigger theme-button"
-                  href="#download"
-                  target="_self"
-                  >Download</a
-                >
-              </li>
-            </ul>
+                  <a
+                    :href="nav.link"
+                    target="_self"
+                    class="nav-link js-scroll-trigger"
+                    >{{ nav.title }}</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav text-capitalize ml-auto">
+                <li class="nav-item">
+                  <a class="btn-outline-default" href="">Sign In</a>
+                  <cta-button text="Download" size="large" />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </b-navbar>
@@ -125,8 +71,8 @@
         <b-container fluid>
           <b-navbar-brand to="/"
             ><b-img
-              :src="require('../../../assets/img/logo.png')"
-              img-alt="RATH Logo"
+              :src="logo"
+              img-alt="matter Logo"
               class="img-fluid mobile-logo"
             ></b-img
           ></b-navbar-brand>
@@ -142,34 +88,12 @@
           <b-collapse id="nav-collapse" is-nav>
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto">
-              <b-nav-item-dropdown
-                to="/"
-                text="Home"
-                no-caret
-                class="fas fa-angle-down"
+              <b-nav-item
+                v-for="(nav, index) in navItems"
+                :key="index"
+                :href="nav.link"
+                >{{ nav.title }}</b-nav-item
               >
-                <b-dropdown-item to="/">Home Default</b-dropdown-item>
-                <b-dropdown-item to="/home2">Home Style 2</b-dropdown-item>
-                <b-dropdown-item to="/home3">Home Style 3</b-dropdown-item>
-                <b-dropdown-item to="/home4">Home Style 4</b-dropdown-item>
-                <b-dropdown-item to="/home5">Home Style 5</b-dropdown-item>
-              </b-nav-item-dropdown>
-              <b-nav-item href="#about">About</b-nav-item>
-              <b-nav-item href="#screenshots">Screenshots</b-nav-item>
-              <b-nav-item href="#features">Features</b-nav-item>
-              <b-nav-item href="#reviews">Reviews</b-nav-item>
-              <b-nav-item-dropdown
-                href="#blog"
-                text="Blog"
-                no-caret
-                class="fas fa-angle-down"
-              >
-                <b-dropdown-item to="/bloggrid">Blog Grid</b-dropdown-item>
-                <b-dropdown-item to="/blogclassic"
-                  >Blog Classic</b-dropdown-item
-                >
-                <b-dropdown-item to="/blogsingle">Blog Single</b-dropdown-item>
-              </b-nav-item-dropdown>
               <b-nav-item href="#download"
                 ><span class="theme-button">Download</span></b-nav-item
               >
@@ -184,9 +108,35 @@
 </template>
 
 <script>
+import CtaButton from "@/components/matter/components/CtaButton.vue";
 export default {
   name: "HeaderMatter",
-
+  components: {
+    CtaButton,
+  },
+  data() {
+    return {
+      logo: require("@/assets/icon/logo-blue.png"),
+      navItems: [
+        {
+          link: "#home",
+          title: "Home",
+        },
+        {
+          link: "#feature",
+          title: "Feature",
+        },
+        {
+          link: "#pricing",
+          title: "Pricing",
+        },
+        {
+          link: "#contact-us",
+          title: "Contact Us",
+        },
+      ],
+    };
+  },
   mounted: function () {
     // Menu Js
     this.$nextTick(function () {
@@ -212,11 +162,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* added style */
+/*            added style                */
 
-
+/* button */
+.btn-outline-default {
+  border-radius: 50px;
+  border: 1px solid #01a9ed;
+  padding: 10px 30px;
+  color: #01a9ed;
+  margin-right: 20px;
+  font-size: 14px;
+}
 
 /* Mobile Dropdown CSS */
+.mobile-logo {
+  height: unset;
+  padding: 20px 0;
+}
 .menu-section-area #mainNavMobile.navbar {
   background-color: #fff;
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
@@ -279,11 +241,18 @@ ul.dropdown-menu .dropdown-item {
   background-color: transparent;
 }
 
-/* replace the deafult style css */
+
+
+/*         replace the deafult style css           */
+
+
+
 #mainNav {
   background: #fff;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   color: #01a9ed;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 </style>

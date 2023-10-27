@@ -1,5 +1,5 @@
 <template>
-  <section class="section-matter-editing">
+  <section id="feature" class="section-matter-editing">
     <div class="container">
       <div class="wrapper">
         <div class="heading">
@@ -31,7 +31,7 @@ export default {
         },
         {
           id: 2,
-          icon: require("@/assets/icon/media.svg"),
+          icon: require("@/assets/icon/video.svg"),
           text: "Edit your project Trim or Crop Video",
         },
         {

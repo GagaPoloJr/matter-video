@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home1 from '../views/Home1.vue'
+import Matter from '../views/Matter.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
-    name: 'Home1',
-    component: Home1
+    name: 'MatterPage',
+    component: Matter
   },
   {
     path: '/home2',
@@ -45,11 +45,7 @@ Vue.use(VueRouter)
     name: 'BlogSingle',
     component: () => import(/* webpackChunkName: "blogsingle" */ '../views/BlogSingle.vue')
   },
-  {
-    path: '/matter',
-    name: 'MatterPage',
-    component: () => import(/* webpackChunkName: "matterpage" */ '../views/Matter.vue')
-  }
+  
 ]
 
 const router = new VueRouter({

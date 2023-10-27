@@ -2,12 +2,30 @@
   <div class="section-matter-3">
     <div class="container">
       <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-lg-5">
+        <div class="col-12 col-lg-6">
           <div class="heading" v-html="title"></div>
           <div v-html="subTitle"></div>
         </div>
-        <div class="col-12 col-lg-7">
-          <img :src="image" alt="" />
+        <div class="col-1"></div>
+        <div class="col-12 col-lg-5">
+          <div class="img-wrapper">
+            <img
+              class="ornament ornament-style-1"
+              :src="ornaments.pink"
+              alt=""
+            />
+            <img
+              class="ornament ornament-style-2"
+              :src="ornaments.blueLight"
+              alt=""
+            />
+            <img
+              class="ornament ornament-style-3"
+              :src="ornaments.blue"
+              alt=""
+            />
+            <img class="img" :src="image" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -24,7 +42,12 @@ export default {
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br><br>
         It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
             </p>`,
-      image: require("../../../assets/img/matter/img-section2.png"),
+      image: require("@/assets/img/matter/section3.png"),
+      ornaments: {
+        pink: require("@/assets/icon/ellipse-pink.png"),
+        blue: require("@/assets/icon/rect-blue-small.png"),
+        blueLight: require("@/assets/icon/rect-blue.png"),
+      },
     };
   },
 };
@@ -61,11 +84,56 @@ export default {
   text-align: center;
 }
 
+.img-wrapper {
+  background: #050748;
+  max-width: 552px;
+  max-height: 283px;
+  border-radius: 30px;
+  position: relative;
+}
+
+.img{
+  position: relative;
+  z-index: 2;
+}
+
+/* ornament */
+
+.ornament{
+  position: absolute;
+}
+
+.ornament-style-1{
+top: 20px;
+right:-20px;
+z-index: 1;
+}
+.ornament-style-2{
+bottom: -80px;
+left:-50px;
+}
+.ornament-style-3{
+bottom: -80px;
+right:0;
+z-index: 4;
+}
 /* media query */
 
 @media screen and (max-width: 768px) {
   .section-matter-3 h1 {
     font-size: 24px;
+  }
+}
+
+@media screen and (max-width:578px){
+  .ornament-style-1{
+    width: 30px;
+    right:-20px;
+  }
+  .ornament-style-2{
+    bottom: -40px;
+    width: 100px;
+    left:-20px;
   }
 }
 </style>

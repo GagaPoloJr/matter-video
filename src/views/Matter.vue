@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-content">
     <header-matter />
     <hero />
     <section-matter1 />
@@ -13,12 +13,14 @@
     <section-matter6 />
     <section-matter7 />
     <footer-matter />
+    <footer-copyright />
   </div>
 </template>
 
 <script>
 import HeaderMatter from "@/components/matter/layouts/Header.vue";
 import FooterMatter from "@/components/matter/layouts/Footer.vue";
+import FooterCopyright from "@/components/matter/layouts/FooterCopyright.vue";
 import Hero from "@/components/matter/Hero.vue";
 import SectionMatter1 from "@/components/matter/layouts/Section1.vue";
 import SectionMatter2 from "@/components/matter/layouts/Section2.vue";
@@ -41,6 +43,7 @@ export default {
     SectionMatter5,
     SectionMatter6,
     SectionMatter7,
+    FooterCopyright,
   },
 };
 </script>

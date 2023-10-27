@@ -1,10 +1,12 @@
 <template>
-  <section class="section-pricing">
+  <section id="pricing" class="section-matter-pricing">
     <div class="container">
-      <div class="pricing-heading row justify-content-center align-items-center text-center">
+      <div
+        class="pricing-heading row justify-content-center align-items-center text-center"
+      >
         <div class="col-12">
           <h1 class="pricing-title">{{ title }}</h1>
-          <h3 class="pricing-subtitle">{{ subTitle }}</h3>
+          <p class="pricing-subtitle">{{ subTitle }}</p>
           <p class="pricing-text">{{ text }}</p>
         </div>
       </div>
@@ -37,12 +39,12 @@ export default {
         {
           id: 2,
           badge: "Premium",
-          price: "$0",
+          price: "$20",
         },
         {
           id: 3,
           badge: "Pro",
-          price: "$0",
+          price: "$50",
         },
       ],
     };
@@ -51,15 +53,31 @@ export default {
 </script>
 
 <style scoped>
-.section-pricing {
+.section-matter-pricing {
   background: #050748;
 }
 
-.pricing-heading{
-    margin-bottom: 100px;
+.pricing-heading {
+  margin-bottom: 100px;
 }
-.pricing-title, .pricing-subtitle, .pricing-text{
-    color: #fff;
+.pricing-title,
+.pricing-subtitle,
+.pricing-text {
+  color: #fff;
+}
+
+.pricing-title {
+  font-size: 36px;
+  font-weight: 700;
+}
+.pricing-subtitle {
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 25px;
+
+}
+.pricing-text {
+  margin-top: 10px;
 }
 
 .pricing-wrapper {
@@ -69,5 +87,7 @@ export default {
   gap: 0.8rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 </style>
