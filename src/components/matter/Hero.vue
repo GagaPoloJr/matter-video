@@ -19,7 +19,7 @@
                     <cta-button style="display: inline-block;" text="Try for Free" size="large" />
                   </div>
                 </div>
-                <div class="col-12 col-lg-6 order-1 order-md-2">
+                <div class="col-12 col-lg-6 order-1 order-md-2 mb-5 mb-md-0">
                   <img class="hero-banner"
                     :src="require('@/assets/img/matter/hero.png')"
                     alt=""

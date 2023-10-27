@@ -94,9 +94,11 @@
                 :href="nav.link"
                 >{{ nav.title }}</b-nav-item
               >
-              <b-nav-item href="#download"
-                ><span class="theme-button">Download</span></b-nav-item
-              >
+              <b-nav-item href="#download">
+                <a class="btn-outline-default" href="">Sign In</a>
+
+                <cta-button text="Sign Up" size="large" />
+              </b-nav-item>
             </b-navbar-nav>
           </b-collapse>
         </b-container>
@@ -172,6 +174,12 @@ export default {
   color: #01a9ed;
   margin-right: 20px;
   font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-default:hover{
+  background: #01a9ed;
+  color: #fff;
 }
 
 /* Mobile Dropdown CSS */
@@ -197,6 +205,7 @@ export default {
   z-index: 9;
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
 }
 #mainNavMobile .navbar-nav li.nav-item:hover,
 #mainNavMobile .navbar-nav li.nav-item.active {
@@ -221,8 +230,7 @@ export default {
 .menu-section-area .nav-item .nav-link,
 ul.dropdown-menu .dropdown-item {
   font-weight: normal;
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 #mainNavMobile .navbar-nav li:last-child span {
   width: auto;
@@ -241,18 +249,14 @@ ul.dropdown-menu .dropdown-item {
   background-color: transparent;
 }
 
-
-
 /*         replace the deafult style css           */
-
-
 
 #mainNav {
   background: #fff;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   color: #01a9ed;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 </style>
