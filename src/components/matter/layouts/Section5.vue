@@ -7,7 +7,7 @@
           <div v-html="subTitle"></div>
         </div>
         <div class="col-1"></div>
-        <div class="col-12 col-lg-6 mt-5 mt-md-0">
+        <div data-aos="fade-left" class="col-12 col-lg-6 mt-5 mt-md-0">
           <div class="img-wrapper">
             <img
               class="ornament ornament-style-1"
@@ -50,6 +50,8 @@ export default {
 <style scoped>
 .section-matter-5 {
   margin-bottom: 100px;
+  overflow-x: hidden;
+
 }
 
 .section-matter-5 .heading {

@@ -1,5 +1,5 @@
 <template>
-  <div class="video-card">
+  <div data-aos="fade-up" class="video-card">
     <img
       class="ornament ornament-style-1"
       :src="require('../../../assets/icon/ornament-video-pink.svg')"

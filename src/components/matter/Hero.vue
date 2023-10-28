@@ -9,18 +9,26 @@
         <div class="row">
           <div class="col-12">
             <!--Hero Area Wrapper-->
-            <div class="hero-area-wrapper position-relative wow fadeInLeft">
-              <div class="row justify-content-center align-items-center">
+            <div class="hero-area-wrapper position-relative">
+              <div
+                class="row justify-content-center align-items-center"
+                data-aos="fade-up"
+              >
                 <div class="col-12 col-lg-6 order-2 order-md-1">
                   <div class="hero-area-content">
                     <h1>{{ heroTitle }}</h1>
                     <h3>{{ heroSubTitle }}</h3>
                     <p>{{ heroText }}</p>
-                    <cta-button style="display: inline-block;" text="Try for Free" size="large" />
+                    <cta-button
+                      style="display: inline-block"
+                      text="Try for Free"
+                      size="large"
+                    />
                   </div>
                 </div>
                 <div class="col-12 col-lg-6 order-1 order-md-2 mb-5 mb-md-0">
-                  <img class="hero-banner"
+                  <img
+                    class="hero-banner"
                     :src="require('@/assets/img/matter/hero.png')"
                     alt=""
                   />
@@ -65,11 +73,11 @@ export default {
   text-wrap: nowrap;
 }
 
-@media screen  and (max-width: 991px){
-.hero-area-content h3 {
-  text-wrap: wrap;
-  font-size: 24px;
-}
+@media screen and (max-width: 991px) {
+  .hero-area-content h3 {
+    text-wrap: wrap;
+    font-size: 24px;
+  }
 }
 
 /* replace the default style css */
@@ -95,7 +103,7 @@ export default {
   -webkit-text-fill-color: transparent;
 }
 
-.hero-banner{
+.hero-banner {
   width: 100%;
 }
 

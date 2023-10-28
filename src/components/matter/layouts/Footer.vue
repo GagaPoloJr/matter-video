@@ -137,7 +137,7 @@ i.fab {
   margin-top: 10px;
   display: flex;
   gap: 10px;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 768px) {

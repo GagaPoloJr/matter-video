@@ -78,7 +78,7 @@ body {
     color: #777c87;
     letter-spacing: 0.05em;
     position: relative;
-    overflow-y: scroll
+    overflow-y: scroll;
 }
 
 p{

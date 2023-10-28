@@ -5,7 +5,7 @@
         <div class="heading">
           <h3>Make your editing <span class="colored">Easier</span></h3>
         </div>
-        <div class="wrapper-style">
+        <div data-aos="fade-down" class="wrapper-style">
           <card :item="item" v-for="item in items" :key="item.id" />
         </div>
       </div>

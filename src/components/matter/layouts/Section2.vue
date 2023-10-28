@@ -6,7 +6,7 @@
           <h1>{{ title }}</h1>
           <div v-html="subTitle"></div>
         </div>
-        <div class="col-12 col-lg-7">
+        <div data-aos="fade-left" class="col-12 col-lg-7">
           <img :src="image" alt="" />
         </div>
       </div>
@@ -34,6 +34,7 @@ With our expertise in machine learning and robotic process automation, we empowe
 <style scoped>
 .section-matter-2 {
   margin-bottom: 100px;
+  overflow-x: hidden;
 }
 
 .section-matter-2 h1 {

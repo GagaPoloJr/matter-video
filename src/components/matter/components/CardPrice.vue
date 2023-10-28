@@ -1,5 +1,5 @@
 <template>
-  <div class="card-price card-price-style" :class="proBadge">
+  <div data-aos="fade-down" class="card-price card-price-style" :class="proBadge">
     <div class="card-price-top">
       <h3>{{ item.badge }}</h3>
     </div>
@@ -103,7 +103,7 @@ export default {
 .price {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 }
 .price h1 {
   color: #0100ff;
