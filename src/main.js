@@ -15,10 +15,6 @@ Vue.directive("b-scrollspy", VBScrollspy);
 // Main CSS Add
 import "./assets/app.css";
 
-// import animate.css
-import AnimateCSS from "animate.css";
-Vue.use(AnimateCSS);
-
 // import aos
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -41,7 +37,7 @@ new Vue({
   mounted() {
     AOS.init({
       delay: 100,
-      duration:700,
+      duration: 700,
       once: true,
     });
   },
